@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My-Store - eCommerce Website</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="" type="image/x-icon" />
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - MODAL
+  -->
+
+  <div class="modal" data-modal>
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+      <button class="modal-close-btn" data-modal-close>
+        X
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="newsletter-img">
+        <img src="" alt="subscribe newsletter" width="400" height="400" />
+      </div>
+
+      <div class="newsletter">
+        <form action="#">
+          <div class="newsletter-header">
+            <h3 class="newsletter-title">Subscribe Newsletter.</h3>
+
+            <p class="newsletter-desc">
+              Subscribe the <b>My-Store</b> to get latest products and
+              discount update.
+            </p>
+          </div>
+
+          <input type="email" name="email" class="email-field" placeholder="Email Address" required />
+
+          <button type="submit" class="btn-newsletter">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    - NOTIFICATION TOAST
+  -->
+
+  <div class="notification-toast" data-toast>
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline">x</ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="images/watch1.webp" alt="Rose Gold Earrings" width="80" height="80" />
+    </div>
+
+    <div class="toast-detail">
+      <p class="toast-message">New Watch For Sale</p>
+
+      <p class="toast-title">NOISE</p>
+    </div>
+  </div>
+
+  <div class="notification" data-toast>
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline">x</ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="images/watch3.webp" alt="Rose Gold Earrings" width="80" height="80" />
+    </div>
+
+    <div class="toast-detail">
+      <p class="toast-message">New Watch For Sale</p>
+
+      <p class="toast-title">BOAT</p>
+    </div>
+  </div>
+
+  <!--
+    - HEADER
+  -->
+
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-facebook fa-lg"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-instagram fa-lg"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-twitter fa-lg"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <i class="fa-brands fa-youtube fa-lg"></i>
+            </a>
+          </li>
+        </ul>
+
+        <div class="header-alert-news">
+          <p>
+            <b>Free Shipping</b>
+            This Week Order Over - <i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>399
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <a href="#" class="header-logo"> My-Store
+
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name..." />
+
+          <button class="search-btn">
+            <ion-icon name="search-outline"><i class="fa-solid fa-magnifying-glass"
+                style="color: #000000;"></i></ion-icon>
+          </button>
+        </div>
+
+        <div class="header-user-actions">
+          <a href="" style="color: black;"><i class="fa-sharp fa-solid fa-user fa-lg"></i></a>
+
+
+          <a href=""><img src="images/love_7475529.png" alt="" width="30px"></a>
+
+          <a href="" style="color: black;"><i class="fa-solid fa-cart-shopping fa-lg"></i>
+            <span class="count">0</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category">
+            <a href="index.html" class="menu-title">Home</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Categories</a>
+
+            <div class="dropdown-panel">
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="products.html">Smart Watch</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">RealMe</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">Fastrack</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">BoAt</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">Noise</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">Apple</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/poster4.jpg" alt="headphone collection" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="products.html">Watch</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">Titan</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">Fastrack</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">Rolex</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">Tommy Hilfiger</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Sunglasses</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/poster5.jpg" alt="men's fashion" width="250" height="80" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="products.html">Headphones</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">boAt</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">RealMe</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">Sony</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">Samsung</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="products.html">JBL</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="images/banner-2.webp" alt="women's fashion" width="250" height="119" />
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="dropdown-panel-list">
+                <li class="menu-title">
+                  <a href="products.html">Bluetooth Speakers</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Sony</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">Samsung</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">JBL</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">BoAt</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">F&D</a>
+                </li>
+
+                <li class="panel-list-item">
+                  <a href="#">
+                    <img src="./assets/images/electronics-banner-2.jpg" alt="mouse collection" width="250"
+                      height="119" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="menu-category">
+            <a href="products.html" class="menu-title">Men's</a>
+
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <a href="products.html">Smartwatch</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="products.html">Formal Watch</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="products.html">Speakers</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="products.html">headphone</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="products.html" class="menu-title">Women's</a>
+
+
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <a href="#">Smartwatch</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Formal Watch</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Speakers</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">headphone</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="contact.html" class="menu-title">CONTACT</a>
+
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <a href="#">Earrings</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Couple Rings</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Necklace</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Bracelets</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">REGISTER</a>
+
+            <ul class="dropdown-list">
+              <li class="dropdown-item">
+                <a href="#">Clothes Perfume</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Deodorant</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Flower Fragrance</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="#">Air Freshener</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Blog</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Hot Offers</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn " data-mobile-menu-open-btn>
+        <a href="" style="color: black;" ><i class="fa-solid fa-bars fa-sm"></i></a>
+       
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <button class="action">
+        <a href="products.html" style="color: black;" ><i class="fa-solid fa-shirt fa-lg"></i></a>
+
+
+        <span class="count"></span>
+      </button>
+
+      <button class="action-btn">
+        <a href="index.html" style="color: black;" ><i class="fa-solid fa-house fa-sm"></i></a>
+       
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <a href="contact.html" style="color: black;"><i class="fa-solid fa-id-card fa-sm"></i></a>
+       
+        <ion-icon name="heart-outline"></ion-icon>
+
+        <span class="count"></span>
+      </button>
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <a href="cart.html" style="color: black;"><i class="fa-solid fa-cart-shopping fa-sm"></i></a>
+        
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+    </div>
+
+    <nav class="mobile-navigation-menu has-scrollbar active" data-mobile-menu style="background: white;">
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <i class="fa-solid fa-xmark"></i>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <li class="menu-category">
+          <a href="products.html" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <a href="products.html"><p class="menu-title">Men's</p></a>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"><i class="fa-solid fa-minus"></i></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list " data-accordion>
+            <li class="submenu-category">
+              <a href="products.html" class="submenu-title">Smartwatch</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="products.html" class="submenu-title">Formal Watch</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Headphones</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="#" class="submenu-title">Speakers</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Watch</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+            <li class="panel-list-item">
+              <a href="products.html">RealMe</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Fastrack</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">BoAt</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Noise</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Apple</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Headphones</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+            <li class="panel-list-item">
+              <a href="products.html">boAt</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">RealMe</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="products.html">Sony</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="#">Samsung</a>
+            </li>
+
+            <li class="panel-list-item">
+              <a href="#">JBL</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-category">
+          <button class="accordion-menu" data-accordion-btn>
+            <a href="contact.html"><p class="menu-title">Contact</p></a>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+            
+          </ul>
+        </li>
+
+        
+
+        </div>
+    </nav>
+  </header>
+
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+
+    <!--
+      - BANNER
+    -->
+
+    <div class="banner">
+
+      <div class="container">
+
+        <div class="slider-container has-scrollbar">
+
+          <div class="slider-item">
+
+            <img src="images/watch-back.jpg" alt="women's latest fashion sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">Titan</p>
+
+              <h2 class="banner-title">Women White Leather Analogue Watch</h2>
+
+              <p class="banner-text">
+                starting at Price; <b>1500</b>
+              </p>
+
+              <a href="#" class="banner-btn">Shop now</a>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="slider-item">
+
+            <img src="images/banner-1.jpg" alt="women's latest fashion sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">Titan</p>
+
+              <h2 class="banner-title">Women White Leather Analogue Watch</h2>
+
+              <p class="banner-text">
+                starting at Price; <b>1500</b>
+              </p>
+
+              <a href="#" class="banner-btn">Shop now</a>
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="images/banner-2.webp" alt="women's latest fashion sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle"></p>
+
+              <h2 class="banner-title"></h2>
+
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="images/banner-3.webp" alt="women's latest fashion sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle"></p>
+
+              <h2 class="banner-title"></h2>
+
+
+            </div>
+
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+
+
+      <!--
+      - CATEGORY
+    -->
+
+      <div class="category" >
+
+        <div class="container">
+
+          <div class="category-item-container has-scrollbar">
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/watch5.avif" alt="dress & frock" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Titan</h3>
+
+                  <p class="category-item-amount">(53)</p>
+                </div>
+
+                <a href="#" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/watch4.avif" alt="winter wear" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Wave Call</h3>
+
+                  <p class="category-item-amount">(58)</p>
+                </div>
+
+                <a href="#" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/watch6.avif" alt="glasses & lens" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Fastrack</h3>
+
+                  <p class="category-item-amount">(68)</p>
+                </div>
+
+                <a href="#" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/watch7.avif" alt="shorts & jeans" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Boat</h3>
+
+                  <p class="category-item-amount">(84)</p>
+                </div>
+
+                <a href="#" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/watch8.webp" alt="t-shirts" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Sonata</h3>
+
+                  <p class="category-item-amount">(35)</p>
+                </div>
+
+                <a href="#" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/watch9.webp" alt="jacket" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">
+                    Fastrack</h3>
+
+                  <p class="category-item-amount">(16)</p>
+                </div>
+
+                <a href="#" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/watch1.webp" alt="watch" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Watch</h3>
+
+                  <p class="category-item-amount">(27)</p>
+                </div>
+
+                <a href="#" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+            <div class="category-item">
+
+              <div class="category-img-box">
+                <img src="images/watch2.jpg" alt="hat & caps" width="30">
+              </div>
+
+              <div class="category-content-box">
+
+                <div class="category-content-flex">
+                  <h3 class="category-item-title">Sonata</h3>
+
+                  <p class="category-item-amount">(39)</p>
+                </div>
+
+                <a href="#" class="category-btn">Show all</a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Slider Section -->
+
+      <h2 class="title">Best Deal</h2>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/banner-4.avif" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/banner-5.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/banner-6.webp" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+
+
+
+
+      <!-- PRODUCT MINIMAL -->
+
+      <div class="product-minimal">
+
+        <div class="product-showcase">
+
+          <h2 class="title">BOAT</h2>
+
+          <div class="showcase-wrapper has-scrollbar" style="text-decoration: none;" >
+
+            <div class="showcase-container">
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/boat1.webp" alt="relaxed short full sleeve t-shirt" width="70" class="showcase-img">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Wave Flex Connect</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Large Display BT Calling Smartwatch</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>1200</p>
+                    <del>2500</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/boat2.webp" alt="" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Boat Wave Call</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Bluetooth Calling Smartwatch</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>2000</p>
+                    <del>4000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/boat3.webp" alt="black floral wrap midi skirt" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Wave Select Smartwatch</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">1.69"(4.29 cm) Colour HD Display</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>2000</p>
+                    <del>4500</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/boat4.webp" alt="pure garment dyed cotton shirt" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Wave Style Black</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Sports Smartwatch</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>1850</p>
+                    <del>3500</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="showcase-container">
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/boat5.webp" alt="men yarn fleece full-zip jacket" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Wave Style Call (Cherry Blossom)</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Smartwatch, Bluetooth</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>2000</p>
+                    <del>5000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/boat6.webp" alt="mens winter leathers jackets" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Boat Wave Style Call</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">1.69 inch HD Display Smartwatch, Bluetooth Calling</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>2500</p>
+                    <del>6000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/boat7.webp" alt="mens winter leathers jackets" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Boat Storm Pro (Deep Blue)</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Smartwatch with Fitness Trackers</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>3500</p>
+                    <del>8000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/boat8.webp" alt="better basics french terry sweatshorts" class="showcase-img"
+                    width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Wave Flex Connect</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category"> Large Display BT Calling Smartwatch, Upto 10 Days Battery,</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>3500</p>
+                    <del>6000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="product-showcase">
+
+          <h2 class="title">FASTRACK
+          </h2>
+
+          <div class="showcase-wrapper  has-scrollbar">
+
+            <div class="showcase-container">
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/fastrack1.avif" alt="running & trekking shoes - white" class="showcase-img"
+                    width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Fastrack</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Black Dial Silver Stainless Steel Strap</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>4000</p>
+                    <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>8000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/fastrack2.avif" alt="trekking & running shoes - black" class="showcase-img"
+                    width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Fastrack</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Trendies Black Dial Silicone Strap Watch</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>2500</p>
+                    <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>6500</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/fastrack3.avif" alt="womens party wear shoes" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Fastrack Watch</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Bold Grey Dial Black Leather Strap</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>4000</p>
+                    <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>9000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/fastrack4.webp" alt="sports claw women's shoes" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Fastrack Watch</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Water-Resistant Analogue Watch</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>1999</p>
+                    <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>$5999</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="showcase-container">
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/fastrack5.avif" alt="air tekking shoes - white" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Fastrack</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category"> Brown Dial Black Plastic Strap Watch</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>4500</p>
+                    <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>3000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/fastrack6.webp" alt="Boot With Suede Detail" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Fastrack</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Analogue Watch with Stainless Steel</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>2000</p>
+                    <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>6000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/fastrack7.avif" alt="men's leather formal wear shoes" class="showcase-img"
+                    width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Fastrack</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category"> Blue Dial Silver Stainless Steel Strap</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>1200</p>
+                    <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>4000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/fastrack8.avif" alt="casual men's brown shoes" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Fastrack</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Analogue Watch with Leather Strap</a>
+
+                  <div class="price-box">
+                    <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>2500</p>
+                    <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>6000</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="product-showcase">
+
+          <h2 class="title">Top Rated</h2>
+
+          <div class="showcase-wrapper  has-scrollbar">
+
+            <div class="showcase-container">
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="images/fastrack8.avif" alt="pocket watch leather pouch" class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Pocket Watch Leather Pouch</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Watches</a>
+
+                  <div class="price-box">
+                    <p class="price">$50.00</p>
+                    <del>$34.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="./assets/images/products/jewellery-3.jpg" alt="silver deer heart necklace"
+                    class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Silver Deer Heart Necklace</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Jewellery</a>
+
+                  <div class="price-box">
+                    <p class="price">$84.00</p>
+                    <del>$30.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="./assets/images/products/perfume.jpg" alt="titan 100 ml womens perfume" class="showcase-img"
+                    width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Titan 100 Ml Womens Perfume</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Perfume</a>
+
+                  <div class="price-box">
+                    <p class="price">$42.00</p>
+                    <del>$10.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="./assets/images/products/belt.jpg" alt="men's leather reversible belt" class="showcase-img"
+                    width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Men's Leather Reversible Belt</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Belt</a>
+
+                  <div class="price-box">
+                    <p class="price">$24.00</p>
+                    <del>$10.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="showcase-container">
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="./assets/images/products/jewellery-2.jpg" alt="platinum zircon classic ring"
+                    class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">platinum Zircon Classic Ring</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">jewellery</a>
+
+                  <div class="price-box">
+                    <p class="price">$62.00</p>
+                    <del>$65.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="./assets/images/products/watch-1.jpg" alt="smart watche vital plus" class="showcase-img"
+                    width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Smart watche Vital Plus</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">Watches</a>
+
+                  <div class="price-box">
+                    <p class="price">$56.00</p>
+                    <del>$78.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="./assets/images/products/shampoo.jpg" alt="shampoo conditioner packs" class="showcase-img"
+                    width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">shampoo conditioner packs</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">cosmetics</a>
+
+                  <div class="price-box">
+                    <p class="price">$20.00</p>
+                    <del>$30.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="showcase">
+
+                <a href="#" class="showcase-img-box">
+                  <img src="./assets/images/products/jewellery-1.jpg" alt="rose gold peacock earrings"
+                    class="showcase-img" width="70">
+                </a>
+
+                <div class="showcase-content">
+
+                  <a href="#">
+                    <h4 class="showcase-title">Rose Gold Peacock Earrings</h4>
+                  </a>
+
+                  <a href="#" class="showcase-category">jewellery</a>
+
+                  <div class="price-box">
+                    <p class="price">$20.00</p>
+                    <del>$30.00</del>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+      <!--
+            - PRODUCT FEATURED
+          -->
+
+      <div class="product-featured">
+
+        <h2 class="title">Deal of the day</h2>
+
+        <div class="showcase-wrapper has-scrollbar">
+
+          <div class="showcase-container">
+
+            <div class="showcase">
+
+              <div class="showcase-banner">
+                <img src="images/watch5.avif" alt="shampoo, conditioner & facewash packs" class="showcase-img">
+              </div>
+
+              <div class="showcase-content">
+
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </div>
+
+                <a href="#">
+                  <h3 class="showcase-title">Fastrack Watch
+                  </h3>
+                </a>
+
+                <p class="showcase-desc">
+                  Dial Straps Analogue Watch 100% Original Products
+                </p>
+
+                <div class="price-box">
+                  <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>1500</p>
+
+                  <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>5000</del>
+                </div>
+
+                <button class="add-cart-btn">add to cart</button>
+
+
+
+                <div class="countdown-box">
+
+                  <p class="countdown-desc">
+                    Hurry Up! Offer ends in:
+                  </p>
+
+                  <div class="countdown">
+
+                    <div class="countdown-content">
+
+                      <p class="display-number">360</p>
+
+                      <p class="display-text">Days</p>
+
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">24</p>
+                      <p class="display-text">Hours</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">59</p>
+                      <p class="display-text">Min</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">00</p>
+                      <p class="display-text">Sec</p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="showcase-container">
+
+            <div class="showcase">
+
+              <div class="showcase-banner">
+                <img src="images/boat7.webp" alt="Rose Gold diamonds Earring" class="showcase-img">
+              </div>
+
+              <div class="showcase-content">
+
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </div>
+
+                <h3 class="showcase-title">
+                  <a href="#" class="showcase-title">boAt</a>
+                </h3>
+
+                <p class="showcase-desc">
+                  Wave Infinity with 1.85 inch HD Screen Bluetooth Calling Smartwatch
+                </p>
+
+                <div class="price-box">
+                  <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>2800</p>
+                  <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>6000</del>
+                </div>
+
+                <button class="add-cart-btn">add to cart</button>
+
+
+
+                <div class="countdown-box">
+
+                  <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+                  <div class="countdown">
+                    <div class="countdown-content">
+                      <p class="display-number">360</p>
+                      <p class="display-text">Days</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">24</p>
+                      <p class="display-text">Hours</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">59</p>
+                      <p class="display-text">Min</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">00</p>
+                      <p class="display-text">Sec</p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="showcase-container">
+
+            <div class="showcase">
+
+              <div class="showcase-banner">
+                <img src="images/watch8.webp" alt="Rose Gold diamonds Earring" class="showcase-img">
+              </div>
+
+              <div class="showcase-content">
+
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </div>
+
+                <h3 class="showcase-title">
+                  <a href="#" class="showcase-title">boAt</a>
+                </h3>
+
+                <p class="showcase-desc">
+                  Wave Infinity with 1.85 inch HD Screen Bluetooth Calling Smartwatch
+                </p>
+
+                <div class="price-box">
+                  <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>1800</p>
+                  <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>5000</del>
+                </div>
+
+                <button class="add-cart-btn">add to cart</button>
+
+
+
+                <div class="countdown-box">
+
+                  <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+                  <div class="countdown">
+                    <div class="countdown-content">
+                      <p class="display-number">360</p>
+                      <p class="display-text">Days</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">24</p>
+                      <p class="display-text">Hours</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">59</p>
+                      <p class="display-text">Min</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">00</p>
+                      <p class="display-text">Sec</p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="showcase-container">
+
+            <div class="showcase">
+
+              <div class="showcase-banner">
+                <img src="images/watch6.avif" alt="Rose Gold diamonds Earring" class="showcase-img">
+              </div>
+
+              <div class="showcase-content">
+
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </div>
+
+                <h3 class="showcase-title">
+                  <a href="#" class="showcase-title">Fastrack</a>
+                </h3>
+
+                <p class="showcase-desc">
+                  Men Grey Analogue Watch Display: Analogue
+                  Movement: Quartz
+                  Power source: Battery
+                </p>
+
+                <div class="price-box">
+                  <p class="price"><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>4400</p>
+                  <del><i class="fa-sharp fa-solid fa-indian-rupee-sign"></i>8000</del>
+                </div>
+
+                <button class="add-cart-btn">add to cart</button>
+
+
+
+                <div class="countdown-box">
+
+                  <p class="countdown-desc">Hurry Up! Offer ends in:</p>
+
+                  <div class="countdown">
+                    <div class="countdown-content">
+                      <p class="display-number">360</p>
+                      <p class="display-text">Days</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">24</p>
+                      <p class="display-text">Hours</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">59</p>
+                      <p class="display-text">Min</p>
+                    </div>
+
+                    <div class="countdown-content">
+                      <p class="display-number">00</p>
+                      <p class="display-text">Sec</p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+      <!--
+        Frist Blog
+      -->
+
+
+      <div class="blog">
+
+        <div class="container">
+          <h2 class="title">Best Icons</h2>
+
+          <div class="blog-container has-scrollbar">
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="/images/poster1.webp" alt="" object-fit="contain" height="400px" width="300"
+                  class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Fashion</a>
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/poster2.webp" alt="" object-fit="contain" height="400px" width="300"
+                  class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/poster6.webp" alt="" object-fit="contain" height="400px" width="300"
+                  class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/poster7.webp" alt="" object-fit="contain" height="400px" width="300"
+                  class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+
+
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <!--
+      - TESTIMONIALS, CTA & SERVICE
+    -->
+
+      <div>
+
+        <div class="container">
+
+          <div class="testimonials-box">
+
+            <!--
+            - TESTIMONIALS
+          -->
+
+            <div class="testimonial">
+
+              <h2 class="title">testimonial</h2>
+
+              <div class="testimonial-card">
+
+                <img src="images/home10.webp" alt="alan doe" class="testimonial-banner" width="80"
+                  height="80">
+
+                <p class="testimonial-name">Alan Doe</p>
+
+                <p class="testimonial-title">CEO & Founder Invision</p>
+
+                <img src="./assets/images/icons/quotes.svg" alt="quotation" class="quotation-img" width="26">
+
+                <p class="testimonial-desc">
+                  Lorem ipsum dolor sit amet consectetur Lorem ipsum
+                  dolor dolor sit amet.
+                </p>
+
+              </div>
+
+            </div>
+
+
+
+            <!--
+            - CTA
+          -->
+
+            <div class="cta-container">
+
+              <img src="images/poster5.jpg" alt="summer collection" class="cta-banner" style="height: 400px;">
+
+              <a href="#" class="cta-content">
+
+                <p class="discount">45% Discount</p>
+
+                <h2 class="cta-title">Smart Watch</h2>
+
+                <p class="cta-text">Starting @ Rs 1000</p>
+
+                <button class="cta-btn">Shop now</button>
+
+              </a>
+
+            </div>
+
+
+
+            <!--
+            - SERVICE
+          -->
+
+            <div class="service">
+
+              <h2 class="title">Our Services</h2>
+
+              <div class="service-container">
+
+                <a href="#" class="service-item">
+
+                  <div class="service-icon" style="color: rgb(12, 11, 11);" >
+                    <i class="fa-solid fa-truck"></i>
+                  </div>
+
+                  <div class="service-content">
+
+                    <h3 class="service-title">Worldwide Delivery</h3>
+                    <p class="service-desc">For Order Over RS399</p>
+
+                  </div>
+
+                </a>
+
+                <a href="#" class="service-item">
+
+                  <div class="service-icon">
+                    <i class="fa-solid fa-plane" style="color: rgb(12, 11, 11);"></i>
+                  </div>
+
+                  <div class="service-content">
+
+                    <h3 class="service-title">Next Day delivery</h3>
+                    <p class="service-desc">All India Orders Only</p>
+
+                  </div>
+
+                </a>
+
+                <a href="#" class="service-item">
+
+                  <div class="service-icon">
+                    <i class="fa-solid fa-phone" style="color: rgb(12, 11, 11);"></i>
+                  </div>
+
+                  <div class="service-content">
+
+                    <h3 class="service-title">Best Online Support</h3>
+                    <p class="service-desc">Hours: 8AM - 11PM</p>
+
+                  </div>
+
+                </a>
+
+                <a href="#" class="service-item">
+
+                  <div class="service-icon">
+                    <i class="fa-solid fa-reply" style="color: rgb(12, 11, 11);"></i>
+                  </div>
+
+                  <div class="service-content">
+
+                    <h3 class="service-title">Return Policy</h3>
+                    <p class="service-desc">Easy & Free Return</p>
+
+                  </div>
+
+                </a>
+
+                <a href="#" class="service-item">
+
+                  <div class="service-icon">
+                    <i class="fa-solid fa-rupee-sign" style="color: rgb(12, 11, 11);"></i>
+                  </div>
+
+                  <div class="service-content">
+
+                    <h3 class="service-title">30% money back</h3>
+                    <p class="service-desc">For Order Over RS 5000</p>
+
+                  </div>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+      <!--
+      - BLOG
+    -->
+
+      <div class="blog">
+
+        <div class="container">
+
+          <div class="blog-container has-scrollbar">
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/blog1.jpg" alt=""
+                  width="300" class="blog-banner">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Bluetooth Smartwatch</a>
+
+                <a href="#">
+                  <h3 class="blog-title"></h3>
+                </a>
+
+                
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/boat7.webp" alt=""
+                  class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Smartwatch</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+                
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/boat5.webp" alt=""
+                  class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Watch</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+               
+
+              </div>
+
+            </div>
+
+            <div class="blog-card">
+
+              <a href="#">
+                <img src="images/blog1.jpg" alt="Curbside fashion Trends: How to Win the Pickup Battle."
+                  class="blog-banner" width="300">
+              </a>
+
+              <div class="blog-content">
+
+                <a href="#" class="blog-category">Smartwatch</a>
+
+                <h3>
+                  <a href="#" class="blog-title"></a>
+                </h3>
+
+                
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
