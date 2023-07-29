@@ -74,12 +74,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: rgb(133, 133, 133);
+  background: rgb(127, 123, 123);
   border-left: 1px solid #333;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: gray;
+  background: rgb(33, 32, 32);
   border: 1px solid #333;
   border-radius: 5px;
 }
@@ -235,13 +235,12 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .btn-newsletter {
-  background: var(--eerie-black);
-  color: var(--white);
-  font-size: var(--fs-7);
-  font-weight: var(--weight-600);
-  text-transform: uppercase;
+  background: black;
+  color: white;
+  font-size: 17px;
   padding: 10px 15px;
-  border-radius: var(--border-radius-sm);
+  font-weight: 600;
+  border-radius: 5px;
   margin: auto;
   transition: var(--transition-timing);
 }
@@ -402,25 +401,25 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
   /* for vertical scroll */
-  height: 12px;
+  height: 7px;
   /* for horizontal scroll */
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
   background: transparent;
 
-  border-radius: 5px;
+  border-radius: 3px;
 
 }
 
 .has-scrollbar:hover::-webkit-scrollbar-thumb {
-  background: hsl(0, 6%, 72%);
+  background: hsl(0, 1%, 36%);
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: hsl(0, 0%, 80%);
+  background: hsl(0, 0%, 0%);
 }
 
 .title {
@@ -454,7 +453,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .header-main a {
   font-size: 22px;
-  font-family: initial;
+  text-align: center;
   font-weight: 700;
   color: black;
 }
@@ -479,7 +478,8 @@ body::-webkit-scrollbar-thumb:hover {
   border: none;
   /* border-radius: 5px; */
   font-weight: 600;
-  font-family: cursive;
+  font-family: monospace;
+  background-color: whitesmoke;
 }
 
 .search-field::-webkit-search-cancel-button {
@@ -487,7 +487,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .search-btn {
-  background: white;
+  background: whitesmoke;
   position: absolute;
   top: 50%;
   right: 2px;
@@ -522,9 +522,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .mobile-bottom-navigation .action-btn {
   position: relative;
-  font-size: 26px;
   color: #333;
-  padding: 10px;
 }
 
 .mobile-bottom-navigation .count {
@@ -835,9 +833,9 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: flex-start;
   align-items: center;
   gap: 15px;
-  border: 1px solid var(--cultured);
   padding: 15px;
-  border-radius: var(--border-radius-md);
+  border: 1px solid lightslategray;
+  border-radius: 5px;
 }
 
 .product-minimal .showcase:not(:last-child) {
@@ -846,6 +844,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .product-minimal .showcase-content {
   width: calc(100% - 85px);
+ 
 }
 
 .product-minimal .showcase-title {
@@ -865,22 +864,22 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 15px;
   text-transform: capitalize;
   margin-bottom: 3px;
-  font-family: cursive;
+  font-family: sans-serif;
 }
 
 .product-minimal .showcase-category:hover {
-  color: var(--salmon-pink);
+  color: palevioletred;
 }
 
 .product-minimal .price-box {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 10px;
 }
 
 .product-minimal .price {
   font-size: 15px;
-  padding-top: 5px;
+  
   color: black;
   font-weight: 600;
 }
@@ -1701,6 +1700,173 @@ textarea {
       font-size: 0.875em;
   }
 }
+
+
+
+
+
+
+
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+footer {
+  background: black;
+  padding: 30px 0;
+}
+
+.footer-category {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid lightslategrey;
+}
+
+.footer-category-title {
+  color: palevioletred;
+  font-size:22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.footer-category-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 3px;
+  margin-bottom: 15px;
+}
+
+.category-box-title {
+  color: whitesmoke;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-category-link {
+  position: relative;
+  color: silver;
+  font-size: var(--fs-7);
+  text-transform: capitalize;
+  transition: var(--transition-timing);
+}
+
+.footer-category-link:hover { color: palevioletred; }
+
+.footer-category-link:not(:last-child)::after {
+  position: absolute;
+  content: '';
+  top: 3px;
+  right: -10px;
+  background: silver;
+  width: 1px;
+  height: 15px;
+}
+
+
+/**
+ * footer nav 
+ */
+
+.footer-nav {
+  border-bottom: 1px solid lightslategrey;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-nav-list:not(:last-child) { margin-bottom: 20px; }
+
+.footer-nav .nav-title {
+  position: relative;
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.footer-nav .nav-title::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: palevioletred;
+  width: 60px;
+  height: 1px;
+}
+
+.footer-nav-item { padding: 3px 0; }
+
+.footer-nav-link,
+.footer-nav-item .content {
+  width: max-content;
+  color: silver;
+  font-size: 17px;
+  text-transform: capitalize;
+  transition: var(--transition-timing);
+}
+
+.footer-nav-link:hover { color: palevioletred }
+
+.footer-nav-item.flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-nav-item .content {
+  font-style: normal;
+  margin-bottom: 5px;
+}
+
+.footer-nav-item .icon-box {
+  color: silver;
+  font-size: 25px;
+}
+
+.footer-nav-item .icon-box ion-icon { --ionicon-stroke-width: 30px; }
+
+.footer-nav .social-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link .footer-nav-link { font-size: 25px; }
+
+.footer-bottom {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.payment-img {
+  max-width: 335px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.copyright {
+  color: silver;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+}
+
+.copyright a {
+  display: inline;
+  color: inherit;
+}
+
+
+
 
 
 
